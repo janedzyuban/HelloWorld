@@ -90,7 +90,7 @@ graph LR
     M3[AWS Cloud Practitioner] --> Network
 ```
 
-### Milestone Timeline
+### Timeline View
 ```mermaid
 gantt
     title Learning Roadmap with Milestones
@@ -121,6 +121,40 @@ gantt
     AWS Integration     :d2, after d1, 7d
     E2E Project        :d3, after d2, 7d
     Portfolio Ready     :milestone, m4, after d3, 0d
+```
+
+### Milestone Overview Flowchart
+```mermaid
+graph TB
+    Start((Start)) --> M1
+
+    subgraph Milestone1[Milestone 1: Python - 6 weeks]
+        M1[Python Complete] --> |Skills Acquired|P1[✓ Python Syntax<br>✓ OOP Concepts<br>✓ Basic Scripting<br>✓ Error Handling]
+    end
+
+    subgraph Milestone2[Milestone 2: Testing - 8 weeks]
+        M1 --> M2[ISTQB Ready]
+        M2 --> |Skills Acquired|P2[✓ PyTest<br>✓ Selenium<br>✓ API Testing<br>✓ Test Design]
+    end
+
+    subgraph Milestone3[Milestone 3: AWS - 8 weeks]
+        M2 --> M3[AWS Complete]
+        M3 --> |Skills Acquired|P3[✓ Core Services<br>✓ EC2 & S3<br>✓ IAM & Security<br>✓ Cloud Architecture]
+    end
+
+    subgraph Milestone4[Milestone 4: Integration - 4 weeks]
+        M3 --> M4[Portfolio Ready]
+        M4 --> |Final Deliverables|P4[✓ Test Framework<br>✓ Cloud Integration<br>✓ CI/CD Pipeline<br>✓ Documentation]
+    end
+
+    M4 --> Complete((Complete))
+
+    style Start fill:#5cb85c
+    style Complete fill:#5cb85c
+    style M1 fill:#f0ad4e
+    style M2 fill:#f0ad4e
+    style M3 fill:#f0ad4e
+    style M4 fill:#f0ad4e
 ```
 
 ## Detailed Curriculum
@@ -272,7 +306,7 @@ gantt
 │   └── networking/
 └── integration_projects/
     ├── test_framework/
-    ├─��� aws_integration/
+    ├── aws_integration/
     └── e2e_project/
 ```
 
